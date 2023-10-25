@@ -1,0 +1,21 @@
+<nav styles="">
+    <li>
+        <%= link_to "Inicio", root_path, class:""%>
+    </li>
+    <li>
+        <%= link_to "Articulos", articles_path, class:""%>
+    </li>
+    <li>
+        <%= link_to "Nuevos articulos", new_article_path, class:""%>
+    </li>
+    <% if signed_in? %>
+    <li>
+       <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+    </li>
+    <% else %>
+    <li>
+       <%= link_to "Iniciar Sesion", new_user_session_path %>
+    </li>
+    <% end %>
+
+</nav>

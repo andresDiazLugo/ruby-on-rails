@@ -1,0 +1,4 @@
+<h1><%= @article.title %></h1>
+<%= form_for @article, html: { method: :delete, data: { confirm: "¿Estás seguro?" } } do |f| %>
+  <%= f.submit "Eliminar artículo" %>
+<% end %>

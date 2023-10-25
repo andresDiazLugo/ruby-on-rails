@@ -1,0 +1,15 @@
+<%# esto es un archivo parcial %>
+<%= form_with(model: @article) do |form| %>
+  <%# colocamos el parámetro local true para que no haga una petición Ajax %>
+  <div>
+    <%= form.label :title%>
+    <%= form.text_field :title, value: @article.title  %>
+  </div>  
+  <div>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>  
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>
